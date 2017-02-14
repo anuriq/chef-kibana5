@@ -29,11 +29,11 @@ This resource installs Kibana 5 binaries.
 |Attribute|Description|Type|Default|
 |---------|-----------|----|-------|
 |`name`| Simply name. Currently not used. |String||
-|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`node['kibana5']['version']`|
-|`install_method`| Installation method. Currently only `release` is supported. This means installation from official binaries provided by Elastic. |String|`node['kibana5']['install_method']`|
-|`base_dir`| Base directory for Kibana binaries. |String|`node['kibana5']['base_dir']`|
-|`svc_user`| Kibana daemon user. |String|`node['kibana5']['svc_user']`|
-|`svc_group`| Kibana daemon group. |String|`node['kibana5']['svc_group']`|
+|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`5.2.0`|
+|`install_method`| Installation method. Currently only `release` is supported. This means installation from official binaries provided by Elastic. |String|`release`|
+|`base_dir`| Base directory for Kibana binaries. |String|`/opt/kibana`|
+|`svc_user`| Kibana daemon user. |String|`kibana`|
+|`svc_group`| Kibana daemon group. |String|`kibana`|
 
 ### kibana5_configure
 
@@ -43,13 +43,12 @@ This resource configures Kibana daemon and main configuration file.
 
 |Attribute|Description|Type|Default|
 |---------|-----------|----|-------|
-|`service_name`| Name of the daemon |String||
-|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`node['kibana5']['version']`|
-|`configuration`| Hash with configuration file values. See examples. |String|`node['kibana5']['config']`|
-|`svc_user`| Kibana daemon user. |String|`node['kibana5']['svc_user']`|
-|`svc_group`| Kibana daemon group. |String|`node['kibana5']['svc_group']`|
+|`svc_name`| Name of the daemon |String||
+|`svc_user`| Kibana daemon user. |String|`kibana`|
+|`svc_group`| Kibana daemon group. |String|`kibana`|
+|`configuration`| Hash with configuration file values. See examples. |Hash||
 
-examples of Hashes
+examples of configuration hashes:
 
 ```ruby
 {

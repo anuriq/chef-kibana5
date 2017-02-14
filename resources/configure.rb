@@ -18,15 +18,15 @@
 
 resource_name :kibana5_configure
 
-property :service_name, String, name_property: true
-property :configuration, Hash, default: node['kibana5']['config'].to_h
-property :svc_user, String, default: node['kibana5']['user']
-property :svc_group, String, default: node['kibana5']['group']
+property :svc_name, String, name_property: true
+property :svc_user, String, default: 'kibana'
+property :svc_group, String, default: 'kibana'
+property :configuration, Hash, required: true
 
 default_action :configure
 
 action :configure do
-  systemd_service new_resource.service_name do
+  systemd_service new_resource.svc_name do
     description 'Kibana Backend'
     after %w(network.target remote-fs.target nss-lookup.target)
     install do
@@ -40,17 +40,26 @@ action :configure do
     end
   end
 
+  config = new_resource.configuration
+
+  file config['logging.dest'] do
+    mode '0644'
+    owner new_resource.svc_user
+    group new_resource.svc_group
+    not_if { config['logging.dest'] == 'stdout' }
+  end
+
   template node['kibana5']['config_file'] do
     cookbook 'kibana5'
     source 'kibana.yml.erb'
     owner new_resource.svc_user
     group new_resource.svc_group
     mode '0644'
-    variables config: new_resource.configuration
-    notifies :restart, "service[#{new_resource.service_name}]"
+    variables config: config
+    notifies :restart, "service[#{new_resource.svc_name}]"
   end
 
-  service new_resource.service_name do
+  service new_resource.svc_name do
     supports start: true, restart: true, stop: true, status: true
     action [:enable, :start]
   end

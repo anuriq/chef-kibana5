@@ -8,8 +8,8 @@ version          '0.1.0'
 issues_url       'https://github.com/anuriq/chef-kibana5/issues' if respond_to?(:issues_url)
 source_url       'https://github.com/anuriq/chef-kibana5' if respond_to?(:source_url)
 
-supports 'centos', '>= 7'
-supports 'redhat', '>= 7'
+supports 'centos', '>= 7.0'
+supports 'redhat', '>= 7.0'
 
 depends 'ark'
 depends 'systemd'

@@ -19,11 +19,11 @@
 resource_name :kibana5_install
 
 property :name, String, name_property: true
-property :version, String, default: node['kibana5']['version']
-property :install_method, String, default: node['kibana5']['install_method']
-property :base_dir, String, default: node['kibana5']['base_dir']
-property :svc_user, String, default: node['kibana5']['user']
-property :svc_group, String, default: node['kibana5']['group']
+property :version, String, default: '5.2.0'
+property :install_method, String, default: 'release'
+property :base_dir, String, default: '/opt/kibana'
+property :svc_user, String, default: 'kibana'
+property :svc_group, String, default: 'kibana'
 
 default_action :install
 

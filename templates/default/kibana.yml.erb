@@ -1,3 +1,7 @@
+#########################################
+# Managed by Chef. Do not modify by hand!
+#########################################
+
 # Kibana is served by a back end server. This setting specifies the port to use.
 <% if @config.key?('server.port') %>
 server.port: <%= @config['server.port'] %>
@@ -182,7 +186,7 @@ pid.file: <%= @config['pid.file'] %>
 <% if @config.key?('logging.dest') %>
 logging.dest: <%= @config['logging.dest'] %>
 <% else -%>
-#logging.dest: stdout
+logging.dest: stdout
 <% end -%>
 
 # Set the value of this setting to true to suppress all logging output.
