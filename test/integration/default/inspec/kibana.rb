@@ -23,5 +23,5 @@ end
 describe command('curl -I http://127.0.0.1:5601/app/kibana') do
   its(:stdout) { should match(%r{HTTP/1.1 200 OK}) }
   its(:stdout) { should match(/kbn-name: kibana/) }
-  its(:stdout) { should match(/kbn-version: 5.2.0/) }
+  its(:stdout) { should match(/kbn-version: 5.2.1/) }
 end
