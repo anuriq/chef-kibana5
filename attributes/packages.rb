@@ -16,12 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-default['kibana5']['config']['server.port'] = 5601
-default['kibana5']['config']['server.host'] = 'localhost'
-default['kibana5']['config']['elasticsearch.url'] = 'http://localhost:9200'
-default['kibana5']['config']['logging.dest'] = '/var/log/kibana.log'
-
 default['kibana5']['distribution']['base_url'] = 'https://artifacts.elastic.co/downloads/kibana'
 
 default['kibana5']['distribution']['5.2.0'] = {
