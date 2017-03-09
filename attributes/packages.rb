@@ -55,3 +55,22 @@ default['kibana5']['distribution']['5.2.1'] = {
     },
   },
 }
+
+default['kibana5']['distribution']['5.2.2'] = {
+  'release' => {
+    'x64' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-linux-x86_64.tar.gz",
+      'checksum' => '9c7c526ce286da7f63aed9fb9f9d752ec182ff16bf374c55e55e5a0536a33563',
+    },
+    'x86' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-linux-x86.tar.gz",
+      'checksum' => 'de0421728aca00e9d4114b45ad5519b843b700006eb0795fcc2df4371d6baa1d',
+    },
+  },
+  'windows' => {
+    'x64' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-windows-x86.zip",
+      'checksum' => '8d6435aa6cfef1a8ce8d4a84361139d0ea3848abfe87283765b4da4fbaefdd3f',
+    },
+  },
+}

@@ -8,7 +8,7 @@ elasticsearch_user 'elasticsearch'
 
 elasticsearch_install 'elasticsearch' do
   type 'package'
-  version '5.2.1'
+  version '5.2.2'
 end
 
 elasticsearch_configure 'elasticsearch'
