@@ -18,21 +18,40 @@
 
 default['kibana5']['distribution']['base_url'] = 'https://artifacts.elastic.co/downloads/kibana'
 
-default['kibana5']['distribution']['5.2.0'] = {
+default['kibana5']['distribution']['5.3.0'] = {
   'release' => {
     'x64' => {
-      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.0-linux-x86_64.tar.gz",
-      'checksum' => '729af8ab00f719f2038f6c499e508744b274487756e0214b660535ebead6f28a',
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.3.0-linux-x86_64.tar.gz",
+      'checksum' => 'f31369c32d655370f0e51290018004cfbc54e2d648f0f79dba88e36b4d6cce6f',
     },
     'x86' => {
-      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.0-linux-x86.tar.gz",
-      'checksum' => '9df75d2dc05937064f1ec905edc705ab1a83e8aaddef6b2fa90b2826f6cc2ea4',
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.3.0-linux-x86.tar.gz",
+      'checksum' => 'eddc77334032ed30f98289715781d01e7677d598cf4a3ad5595618cc057a8bfc',
     },
   },
   'windows' => {
     'x64' => {
-      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.0-windows-x86.zip",
-      'checksum' => 'bd1be9758b11b071bc033e9ed996598f4da6cdb18b28c475993c429f1c17db31',
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.3.0-windows-x86.zip",
+      'checksum' => '56c5fbd5767dea313ab11489cfed6da063677f9ad38fe9c0420535a46bfdbdaf',
+    },
+  },
+}
+
+default['kibana5']['distribution']['5.2.2'] = {
+  'release' => {
+    'x64' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-linux-x86_64.tar.gz",
+      'checksum' => '9c7c526ce286da7f63aed9fb9f9d752ec182ff16bf374c55e55e5a0536a33563',
+    },
+    'x86' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-linux-x86.tar.gz",
+      'checksum' => 'de0421728aca00e9d4114b45ad5519b843b700006eb0795fcc2df4371d6baa1d',
+    },
+  },
+  'windows' => {
+    'x64' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-windows-x86.zip",
+      'checksum' => '8d6435aa6cfef1a8ce8d4a84361139d0ea3848abfe87283765b4da4fbaefdd3f',
     },
   },
 }
@@ -56,21 +75,21 @@ default['kibana5']['distribution']['5.2.1'] = {
   },
 }
 
-default['kibana5']['distribution']['5.2.2'] = {
+default['kibana5']['distribution']['5.2.0'] = {
   'release' => {
     'x64' => {
-      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-linux-x86_64.tar.gz",
-      'checksum' => '9c7c526ce286da7f63aed9fb9f9d752ec182ff16bf374c55e55e5a0536a33563',
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.0-linux-x86_64.tar.gz",
+      'checksum' => '729af8ab00f719f2038f6c499e508744b274487756e0214b660535ebead6f28a',
     },
     'x86' => {
-      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-linux-x86.tar.gz",
-      'checksum' => 'de0421728aca00e9d4114b45ad5519b843b700006eb0795fcc2df4371d6baa1d',
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.0-linux-x86.tar.gz",
+      'checksum' => '9df75d2dc05937064f1ec905edc705ab1a83e8aaddef6b2fa90b2826f6cc2ea4',
     },
   },
   'windows' => {
     'x64' => {
-      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.2-windows-x86.zip",
-      'checksum' => '8d6435aa6cfef1a8ce8d4a84361139d0ea3848abfe87283765b4da4fbaefdd3f',
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.2.0-windows-x86.zip",
+      'checksum' => 'bd1be9758b11b071bc033e9ed996598f4da6cdb18b28c475993c429f1c17db31',
     },
   },
 }
