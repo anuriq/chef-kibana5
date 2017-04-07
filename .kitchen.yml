@@ -10,6 +10,7 @@ verifier:
 
 platforms:
   - name: centos-7.2
+  - name: ubuntu-16.04
 
 suites:
   - name: default

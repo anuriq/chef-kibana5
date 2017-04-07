@@ -10,6 +10,7 @@ source_url       'https://github.com/anuriq/chef-kibana5' if respond_to?(:source
 
 supports 'centos', '>= 7.0'
 supports 'redhat', '>= 7.0'
+supports 'ubuntu', '>= 16.04'
 
 depends 'ark'
 depends 'systemd'
