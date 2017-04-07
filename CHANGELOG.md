@@ -1,3 +1,9 @@
+## 1.0.0 (April 7, 2017)
+  - Set default version of Kibana to `5.3.0`.
+  - Change home dir for `kibana` user, this won't run on nodes converged with previous versions, that's why major version is incremented.
+  - Add Ubuntu 16.04 for CI testing suites.
+  - Configure Travis to ensure CI.
+
 ## 0.2.2 (March 9, 2017)
   - Set default version of Kibana to 5.2.2
   - Add some default attributes
