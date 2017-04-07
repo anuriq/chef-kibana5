@@ -36,7 +36,7 @@ action :install do
   user new_resource.svc_user do
     comment 'Kibana User'
     gid new_resource.svc_group
-    home install_dir
+    home new_resource.base_dir
     shell '/bin/bash'
     system true
   end
