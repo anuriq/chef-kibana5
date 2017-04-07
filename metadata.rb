@@ -1,6 +1,6 @@
 name             'kibana5'
-maintainer       'Parallels International GmbH'
-maintainer_email 'akhadiev@parallels.com'
+maintainer       'Azat Khadiev'
+maintainer_email 'anuriq@gmail.com'
 license          'Apache 2.0'
 description      'Installs/Configures kibana 5'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
@@ -10,6 +10,7 @@ source_url       'https://github.com/anuriq/chef-kibana5' if respond_to?(:source
 
 supports 'centos', '>= 7.0'
 supports 'redhat', '>= 7.0'
+supports 'ubuntu', '>= 16.04'
 
 depends 'ark'
 depends 'systemd'
