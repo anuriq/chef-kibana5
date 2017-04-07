@@ -33,8 +33,10 @@ suites:
   - name: default
     run_list:
       - recipe[kibana5-test]
+      - recipe[kibana5-test::wait_kibana_start]
 
   - name: nginx
     run_list:
       - recipe[kibana5-test]
       - recipe[kibana5-test::nginx]
+      - recipe[kibana5-test::wait_kibana_start]

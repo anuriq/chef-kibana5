@@ -1,4 +1,6 @@
 # chef-kibana5
+[![Cookbook Version](https://img.shields.io/cookbook/v/kibana5.svg)](https://supermarket.chef.io/cookbooks/kibana5)
+[![Build Status](https://secure.travis-ci.org/anuriq/chef-kibana5.png?branch=master)](http://travis-ci.org/anuriq/chef-kibana5)
 
 ## Description
 
@@ -13,7 +15,7 @@ This cookbook installs and configures [Kibana](https://www.elastic.co/products/k
 
 ### Platforms
 
-Tested only on CentOS 7. Should work on any modern Linux OS with systemd.
+Tested only on CentOS 7 and Ubuntu 16.04. Should work on any modern Linux OS with systemd.
 
 ## Recipes
 * `default.rb` - Runs `kibana5_install` and `kibana5_configure` with default options.
@@ -29,7 +31,7 @@ This resource installs Kibana 5 binaries.
 |Attribute|Description|Type|Default|
 |---------|-----------|----|-------|
 |`name`| Simply name. Currently not used. |String||
-|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`5.2.1`|
+|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`5.3.0`|
 |`install_method`| Installation method. Currently only `release` is supported. This means installation from official binaries provided by Elastic. |String|`release`|
 |`base_dir`| Base directory for Kibana binaries. |String|`/opt/kibana`|
 |`svc_user`| Kibana daemon user. |String|`kibana`|
@@ -80,4 +82,4 @@ You may see examples in fixture cookbook:
 [test/fixtures/kibana5-test/recipes/nginx.rb](test/fixtures/app-cloud-test/recipes/nginx.rb)
 
 ## Authors
-- Author:: Azat Khadiev (akhadiev@parallels.com)
+- Author:: Azat Khadiev (anuriq@gmail.com)
