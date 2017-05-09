@@ -1,4 +1,4 @@
-## 1.1.0 (May 8, 2017)
+## 1.0.1 (May 8, 2017)
   - Add support for Kibana `5.4.0`.
   - Set default version of Kibana to `5.4.0`.
 

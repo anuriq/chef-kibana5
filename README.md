@@ -1,6 +1,6 @@
 # chef-kibana5
 [![Cookbook Version](https://img.shields.io/cookbook/v/kibana5.svg)](https://supermarket.chef.io/cookbooks/kibana5)
-[![Build Status](https://secure.travis-ci.org/anuriq/chef-kibana5.png?branch=master)](http://travis-ci.org/anuriq/chef-kibana5)
+[![Build Status](https://travis-ci.org/anuriq/chef-kibana5.svg?branch=master)](https://travis-ci.org/anuriq/chef-kibana5)
 
 ## Description
 
