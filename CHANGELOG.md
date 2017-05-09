@@ -1,3 +1,7 @@
+## 1.1.0 (May 8, 2017)
+  - Add support for Kibana `5.4.0`.
+  - Set default version of Kibana to `5.4.0`.
+
 ## 1.0.0 (April 7, 2017)
   - Set default version of Kibana to `5.3.0`.
   - Change home dir for `kibana` user, this won't run on nodes converged with previous versions, that's why major version is incremented.
