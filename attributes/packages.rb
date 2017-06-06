@@ -18,6 +18,25 @@
 
 default['kibana5']['distribution']['base_url'] = 'https://artifacts.elastic.co/downloads/kibana'
 
+default['kibana5']['distribution']['5.4.1'] = {
+  'release' => {
+    'x64' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.4.1-linux-x86_64.tar.gz",
+      'checksum' => 'efab73464c6cbc90089acf9275e43c7b3c2bbe8fb62c710567ac523a65c3394b',
+    },
+    'x86' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.4.1-linux-x86.tar.gz",
+      'checksum' => '25b309435ae4760332e2072e80a83848852245f5c91af6f72bf09771a0bd73fa',
+    },
+  },
+  'windows' => {
+    'x64' => {
+      'url' => "#{node['kibana5']['distribution']['base_url']}/kibana-5.4.1-windows-x86.zip",
+      'checksum' => 'bf88a207b5d4be62c02b83cf2d1cce14aac1a48a9feb084817b93e4690b00983',
+    },
+  },
+}
+
 default['kibana5']['distribution']['5.4.0'] = {
   'release' => {
     'x64' => {
