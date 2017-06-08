@@ -1,3 +1,9 @@
+## 1.0.1 (June 8, 2017)
+  - Rethink versions and urls placement, move them to helpers instead of attributes;
+  - Add some default attributes to simplify configuration control;
+  - Remove redundant tests to simplify contributing;
+  - Add support for Kibana `5.4.1` and set default version to `5.4.1`.
+
 ## 1.0.1 (May 8, 2017)
   - Add support for Kibana `5.4.0`.
   - Set default version of Kibana to `5.4.0`.
