@@ -22,8 +22,8 @@ property :name, String, name_property: true
 property :version, String, default: '5.4.1'
 property :install_method, String, default: 'release'
 property :base_dir, String, default: '/opt/kibana'
-property :svc_user, String, default: 'kibana'
-property :svc_group, String, default: 'kibana'
+property :svc_user, String, default: node['kibana5']['service_user']
+property :svc_group, String, default: node['kibana5']['service_group']
 
 default_action :install
 

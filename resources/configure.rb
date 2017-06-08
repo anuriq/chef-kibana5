@@ -19,8 +19,8 @@
 resource_name :kibana5_configure
 
 property :svc_name, String, name_property: true
-property :svc_user, String, default: 'kibana'
-property :svc_group, String, default: 'kibana'
+property :svc_user, String, default: node['kibana5']['service_user']
+property :svc_group, String, default: node['kibana5']['service_group']
 property :configuration, Hash, required: true
 
 default_action :configure
