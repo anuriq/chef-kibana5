@@ -1,4 +1,7 @@
-## 1.0.1 (June 8, 2017)
+## 1.1.1 (June 20, 2017)
+  - Fix use of attributes for default values of resources. 
+
+## 1.1.0 (June 8, 2017)
   - Rethink versions and urls placement, move them to helpers instead of attributes;
   - Add some default attributes to simplify configuration control;
   - Remove redundant tests to simplify contributing;
