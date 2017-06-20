@@ -19,13 +19,16 @@
 resource_name :kibana5_configure
 
 property :svc_name, String, name_property: true
-property :svc_user, String, default: node['kibana5']['service_user']
-property :svc_group, String, default: node['kibana5']['service_group']
+property :svc_user, String, default: ''
+property :svc_group, String, default: ''
 property :configuration, Hash, required: true
 
 default_action :configure
 
 action :configure do
+  svc_user = new_resource.svc_user == '' ? node['kibana5']['service_user'] : new_resource.svc_user
+  svc_group = new_resource.svc_group == '' ? node['kibana5']['service_group'] : new_resource.svc_group
+
   systemd_service new_resource.svc_name do
     description 'Kibana Backend'
     after %w(network.target remote-fs.target nss-lookup.target)
@@ -34,7 +37,7 @@ action :configure do
     end
     service do
       environment 'LANG' => 'C'
-      user new_resource.svc_user
+      user svc_user
       restart 'always'
       exec_start node['kibana5']['exec_file']
     end
@@ -44,16 +47,16 @@ action :configure do
 
   file config['logging.dest'] do
     mode '0644'
-    owner new_resource.svc_user
-    group new_resource.svc_group
+    owner svc_user
+    group svc_group
     not_if { config['logging.dest'] == 'stdout' }
   end
 
   template node['kibana5']['config_file'] do
     cookbook 'kibana5'
     source 'kibana.yml.erb'
-    owner new_resource.svc_user
-    group new_resource.svc_group
+    owner svc_user
+    group svc_group
     mode '0644'
     variables config: config
     notifies :restart, "service[#{new_resource.svc_name}]"

@@ -19,16 +19,18 @@
 resource_name :kibana5_install
 
 property :name, String, name_property: true
-property :version, String, default: node['kibana5']['version']
+property :version, String, default: ''
 property :install_method, String, default: 'release'
 property :base_dir, String, default: '/opt/kibana'
-property :svc_user, String, default: node['kibana5']['service_user']
-property :svc_group, String, default: node['kibana5']['service_group']
+property :svc_user, String, default: ''
+property :svc_group, String, default: ''
 
 default_action :install
 
 action :install do
-  version = new_resource.version
+  version = new_resource.version == '' ? node['kibana5']['version'] : new_resource.version
+  svc_user = new_resource.svc_user == '' ? node['kibana5']['service_user'] : new_resource.svc_user
+  svc_group = new_resource.svc_group == '' ? node['kibana5']['service_group'] : new_resource.svc_group
   install_method = new_resource.install_method
 
   distrib_url = kibana_artifact_url(version, install_method)
@@ -38,11 +40,11 @@ action :install do
 
   case install_method
   when 'release'
-    group new_resource.svc_group
+    group svc_group
 
-    user new_resource.svc_user do
+    user svc_user do
       comment 'Kibana User'
-      gid new_resource.svc_group
+      gid svc_group
       home new_resource.base_dir
       shell '/bin/bash'
       system true
@@ -50,8 +52,8 @@ action :install do
 
     directory install_dir do
       mode '0755'
-      owner new_resource.svc_user
-      group new_resource.svc_group
+      owner svc_user
+      group svc_group
       recursive true
     end
 
@@ -61,7 +63,7 @@ action :install do
       checksum distrib_checksum
       path install_dir
       home_dir ::File.join(install_dir, 'current')
-      owner new_resource.svc_user
+      owner svc_user
     end
 
     node.default['kibana5']['config_file'] = ::File.join(install_dir, 'current/config/kibana.yml')
