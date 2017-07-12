@@ -40,6 +40,7 @@ action :configure do
       user svc_user
       restart 'always'
       exec_start node['kibana5']['exec_file']
+      exec_reload '/bin/kill -HUP $MAINPID'
     end
   end
 
