@@ -19,8 +19,8 @@
 kibana5_install 'kibana'
 
 kibana5_configure 'kibana' do
-  configuration 'server.port' => node['kibana5']['config']['server.port'],
-                'server.host' => node['kibana5']['config']['server.host'],
-                'elasticsearch.url' => node['kibana5']['config']['elasticsearch.url'],
-                'logging.dest' => node['kibana5']['config']['logging.dest']
+  svc_name node['kibana5']['service_name']
+  svc_user node['kibana5']['service_user']
+  svc_group node['kibana5']['service_group']
+  configuration node['kibana5']['config']
 end
