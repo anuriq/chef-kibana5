@@ -1,3 +1,7 @@
+## 1.2.0 (August 20, 2017)
+  - Add version 5.5.2 of Kibana;
+  - Avoid version 3.0 of `systemd` cookbook till it stabilizes.
+
 ## 1.1.2 (July 12, 2017)
   - Add reload setting for systemd unit configuration (@kazjote);
   - Fix according to the newest `foodcritic`.
