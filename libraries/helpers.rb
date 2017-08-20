@@ -58,6 +58,26 @@ module Kibana
     # Returns SHA256 checksum map for Kibana artifacts
     def kibana_checksum_map
       {
+        '5.5.2' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => '4b879a36899d886c1264c6c2e0c662d56ebefee703fa4c62bca793124d3ebd5a',
+            },
+            'x86' => {
+              'checksum' => 'f74e16d73da0b31e8c04276b13f755c49f95e59209079adbefff40cd56e5a62a',
+            },
+          },
+          'windows' => {
+            'x86' => {
+              'checksum' => '9b3014d095543566b6cbff8de7013889ba7e3e49ac8365b7310f51843a9036a6',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => 'f4ee5bd790aa9d2a7e6747a193c1ba5e7d6ce70c59bb2787624e44f2f5a7564e',
+            },
+          },
+        },
         '5.4.1' => {
           'release' => {
             'x86_64' => {
