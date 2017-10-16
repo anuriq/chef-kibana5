@@ -1,3 +1,6 @@
+## 1.3.0 (October 16, 2017)
+  - Add version 5.6.2 of Kibana;
+
 ## 1.2.0 (August 20, 2017)
   - Add version 5.5.2 of Kibana;
   - Avoid version 3.0 of `systemd` cookbook till it stabilizes.
