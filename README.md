@@ -49,6 +49,7 @@ This resource configures Kibana daemon and main configuration file.
 |`svc_user`| Kibana daemon user. |String|`kibana`|
 |`svc_group`| Kibana daemon group. |String|`kibana`|
 |`configuration`| Hash with configuration file values. See examples. |Hash||
+|`template_cookbook`| Override template from other cookbook. |String|`kibana5`|
 
 examples of configuration hashes:
 
