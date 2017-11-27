@@ -1,3 +1,6 @@
+## 1.3.1 (November 27, 2017)
+  - Add option to use custom configuration template from wrapper cookbook;
+
 ## 1.3.0 (October 16, 2017)
   - Add version 5.6.2 of Kibana;
 
