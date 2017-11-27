@@ -22,6 +22,7 @@ property :svc_name, String, name_property: true
 property :svc_user, String, default: ''
 property :svc_group, String, default: ''
 property :configuration, Hash, required: true
+property :template_cookbook, String, default: 'kibana5'
 
 default_action :configure
 
@@ -54,7 +55,7 @@ action :configure do
   end
 
   template node['kibana5']['config_file'] do
-    cookbook 'kibana5'
+    cookbook new_resource.template_cookbook
     source 'kibana.yml.erb'
     owner svc_user
     group svc_group
