@@ -1,3 +1,9 @@
+.DS_Store
+Icon?
+nohup.out
+ehthumbs.db
+Thumbs.db
+
 .vagrant
 *~
 *#
