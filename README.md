@@ -79,8 +79,8 @@ It is recommended to use resources directly.
 
 ## Examples
 You may see examples in fixture cookbook:
-[test/fixtures/kibana5-test/recipes/default.rb](test/fixtures/app-cloud-test/recipes/default.rb)
-[test/fixtures/kibana5-test/recipes/nginx.rb](test/fixtures/app-cloud-test/recipes/nginx.rb)
+[test/fixtures/kibana5-test/recipes/default.rb](test/fixtures/kibana5-test/recipes/default.rb)
+[test/fixtures/kibana5-test/recipes/nginx.rb](test/fixtures/kibana5-test/recipes/nginx.rb)
 
 ## Authors
 - Author:: Azat Khadiev (anuriq@gmail.com)
