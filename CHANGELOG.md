@@ -1,3 +1,9 @@
+## 1.4.0 (8 Feb, 2018)
+  - Add plugin resource;
+
+## 1.3.2 (8 Feb, 2018)
+  - Add version 5.6.7 of Kibana;
+
 ## 1.3.1 (November 27, 2017)
   - Add option to use custom configuration template from wrapper cookbook;
 
