@@ -30,19 +30,43 @@ action :configure do
   svc_user = new_resource.svc_user == '' ? node['kibana5']['service_user'] : new_resource.svc_user
   svc_group = new_resource.svc_group == '' ? node['kibana5']['service_group'] : new_resource.svc_group
 
-  systemd_service new_resource.svc_name do
-    description 'Kibana Backend'
-    after %w(network.target remote-fs.target nss-lookup.target)
-    install do
-      wanted_by 'multi-user.target'
-    end
-    service do
-      environment 'LANG' => 'C'
-      user svc_user
-      restart 'always'
-      exec_start node['kibana5']['exec_file']
-      exec_reload '/bin/kill -HUP $MAINPID'
-    end
+  Chef::Log.info ("Platform : #{node["platform"]}, version: #{node["platform_version"]}")
+  case node["platform"]
+    when "ubuntu"
+      case node['platform_version']
+        when "14.04"
+          template '/etc/init.d/kibana' do
+            cookbook new_resource.template_cookbook
+            source 'service/init.d/kibana.erb'
+            mode 0744
+            owner "root"
+            group "root"
+          end
+          template '/etc/default/kibana' do
+            cookbook new_resource.template_cookbook
+            source 'service/default.erb'
+            mode 0644
+            owner "root"
+            group "root"
+            #sensitive true
+            #notifies :run, 'execute[initctl reload-configuration]', :immediately
+          end
+        else
+          systemd_service new_resource.svc_name do
+            description 'Kibana Backend'
+            after %w(network.target remote-fs.target nss-lookup.target)
+            install do
+              wanted_by 'multi-user.target'
+            end
+            service do
+              environment 'LANG' => 'C'
+              user svc_user
+              restart 'always'
+              exec_start node['kibana5']['exec_file']
+              exec_reload '/bin/kill -HUP $MAINPID'
+            end
+          end
+      end
   end
 
   config = new_resource.configuration
