@@ -71,7 +71,7 @@ module Kibana
             'x86' => {
               'checksum' => 'd4056c384f476005d3811aa57b4f4493d0df475939eb963fc7a94abc21079a3b',
             },
-          } ,
+          },
           'darwin' => {
             'x86_64' => {
               'checksum' => 'b9bb3fb9d166f157f69ea87cf9d9b9935badb0ca0cafc46b17c3ed1669c9eec9',

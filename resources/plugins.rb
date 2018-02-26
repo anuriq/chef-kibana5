@@ -18,36 +18,34 @@
 
 resource_name :kibana5_plugins
 
-property :name, String, name_property: true
 property :install_type, String, default: 'native'
 property :url, String, default: ''
 
 default_action :install
 
-action :install do
+use_inline_resources if defined?(use_inline_resources)
 
+action :install do
   service 'kibana' do
     action :nothing
   end
 
   case new_resource.install_type
-    when 'native'
-      ex = execute "Install #{new_resource.name} Kibana plugin" do
-        command "./kibana-plugin install #{new_resource.name}"
-        cwd     "/opt/kibana/#{node['kibana5']['version']}/current/bin"
-        notifies :restart, "service[kibana]"
-        not_if "/opt/kibana/#{node['kibana5']['version']}/current/bin/kibana-plugin list | grep #{new_resource.name}"
-      end
-      new_resource.updated_by_last_action(ex.updated_by_last_action?)
-    when 'url'
-      ex = execute "Install #{new_resource.name} Kibana plugin" do
-        command "./kibana-plugin install #{new_resource.url}"
-        cwd     "/opt/kibana/#{node['kibana5']['version']}/current/bin"
-        notifies :restart, "service[kibana]"
-        not_if "/opt/kibana/#{node['kibana5']['version']}/current/bin/kibana-plugin list | grep #{new_resource.name}"
-      end
-      new_resource.updated_by_last_action(ex.updated_by_last_action?)
-    else
-      Chef::Application.fatal!("Unknown install type: #{new_resource.install_type}")
+  when 'native'
+    execute "Install #{new_resource.name} Kibana plugin" do
+      command "./kibana-plugin install #{new_resource.name}"
+      cwd     "/opt/kibana/#{node['kibana5']['version']}/current/bin"
+      notifies :restart, 'service[kibana]'
+      not_if "/opt/kibana/#{node['kibana5']['version']}/current/bin/kibana-plugin list | grep #{new_resource.name}"
+    end
+  when 'url'
+    execute "Install #{new_resource.name} Kibana plugin" do
+      command "./kibana-plugin install #{new_resource.url}"
+      cwd     "/opt/kibana/#{node['kibana5']['version']}/current/bin"
+      notifies :restart, 'service[kibana]'
+      not_if "/opt/kibana/#{node['kibana5']['version']}/current/bin/kibana-plugin list | grep #{new_resource.name}"
+    end
+  else
+    Chef::Application.fatal!("Unknown install type: #{new_resource.install_type}")
   end
 end

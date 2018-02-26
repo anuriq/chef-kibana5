@@ -18,7 +18,6 @@
 
 resource_name :kibana5_install
 
-property :name, String, name_property: true
 property :version, String, default: ''
 property :install_method, String, default: 'release'
 property :base_dir, String, default: '/opt/kibana'
