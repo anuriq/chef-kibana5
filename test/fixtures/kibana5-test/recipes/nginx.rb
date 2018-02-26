@@ -1,6 +1,6 @@
 # Install nginx and configure a primitive proxy to Kibana
 node.default['nginx']['default_site_enabled'] = false
-include_recipe 'chef_nginx'
+include_recipe 'nginx'
 
 nginx_site 'kibana' do
   template 'nginx-site.conf.erb'
