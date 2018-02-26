@@ -4,7 +4,7 @@
 
 ## Description
 
-This cookbook installs and configures [Kibana](https://www.elastic.co/products/kibana) version 5.2.0 and above.
+This cookbook installs and configures [Kibana](https://www.elastic.co/products/kibana) version 5.2.0 and above. This cookbook may work with Kibana 6.x.x, but no guarantee.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ This resource installs Kibana 5 binaries.
 |Attribute|Description|Type|Default|
 |---------|-----------|----|-------|
 |`name`| Simply name. Currently not used. |String||
-|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`5.4.1`|
+|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`5.6.8`|
 |`install_method`| Installation method. Currently only `release` is supported. This means installation from official binaries provided by Elastic. |String|`release`|
 |`base_dir`| Base directory for Kibana binaries. |String|`/opt/kibana`|
 |`svc_user`| Kibana daemon user. |String|`kibana`|
