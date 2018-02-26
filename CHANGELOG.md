@@ -1,3 +1,8 @@
+## 1.5.0 (26 Feb, 2018)
+  - Fix style according to newest Cookstyle and FoodCritic;
+  - Use CentOS 7.4 for testing;
+  - Set 5.6.8 as default version of Kibana.
+
 ## 1.4.0 (8 Feb, 2018)
   - Add plugin resource;
 
