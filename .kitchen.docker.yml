@@ -29,6 +29,14 @@ platforms:
         - RUN /usr/bin/apt-get update
         - RUN /usr/bin/apt-get install openssl apt-transport-https lsb-release procps net-tools sudo -y
 
+  - name: ubuntu-14.04
+    driver:
+      image: ubuntu:14.04
+      pid_one_command: /sbin/init
+      intermediate_instructions:
+        - RUN /usr/bin/apt-get update
+        - RUN /usr/bin/apt-get install openssl apt-transport-https lsb-release procps net-tools sudo -y
+
 suites:
   - name: default
     run_list:

@@ -1,3 +1,7 @@
+## 1.5.1 (27 Feb, 2018)
+  - Implemented compatibility with Ubuntu 14.04;
+  - Updated configuration file from the latest version
+
 ## 1.5.0 (26 Feb, 2018)
   - Fix style according to newest Cookstyle and FoodCritic;
   - Use CentOS 7.4 for testing;
