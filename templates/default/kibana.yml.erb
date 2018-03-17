@@ -72,7 +72,6 @@ kibana.defaultAppId: <%= @config['kibana.defaultAppId'] %>
 #kibana.defaultAppId: "discover"
 <% end -%>
 
-
 # If your Elasticsearch is protected with basic authentication, these settings provide
 # the username and password that the Kibana server uses to perform maintenance on the Kibana
 # index at startup. Your Kibana users still need to authenticate with Elasticsearch, which
@@ -88,12 +87,18 @@ elasticsearch.password: <%= @config['elasticsearch.password'] %>
 #elasticsearch.password: "pass"
 <% end -%>
 
-# Paths to the PEM-format SSL certificate and SSL key files, respectively. These
-# files enable SSL for outgoing requests from the Kibana server to the browser.
-<% if @config.key?('server.ssl.cert') %>
-server.ssl.cert: <%= @config['server.ssl.cert'] %>
+
+# Enables SSL and paths to the PEM-format SSL certificate and SSL key files, respectively.
+# These settings enable SSL for outgoing requests from the Kibana server to the browser.
+<% if @config.key?('server.ssl.enabled') %>
+server.ssl.enabled: <%= @config['server.ssl.enabled'] %>
 <% else -%>
-#server.ssl.cert: /path/to/your/server.crt
+#server.ssl.enabled: false
+<% end -%>
+<% if @config.key?('server.ssl.cert') %>
+server.ssl.certificate: <%= @config['server.ssl.cert'] %>
+<% else -%>
+#server.ssl.certificate: /path/to/your/server.crt
 <% end -%>
 <% if @config.key?('server.ssl.key') %>
 server.ssl.key: <%= @config['server.ssl.key'] %>
@@ -103,10 +108,10 @@ server.ssl.key: <%= @config['server.ssl.key'] %>
 
 # Optional settings that provide the paths to the PEM-format SSL certificate and key files.
 # These files validate that your Elasticsearch backend uses the same key files.
-<% if @config.key?('elasticsearch.ssl.cert') %>
-elasticsearch.ssl.cert: <%= @config['elasticsearch.ssl.cert'] %>
+<% if @config.key?('elasticsearch.ssl.certificate') %>
+elasticsearch.ssl.certificate: <%= @config['elasticsearch.ssl.certificate'] %>
 <% else -%>
-#elasticsearch.ssl.cert: /path/to/your/client.crt
+#elasticsearch.ssl.certificate: /path/to/your/client.crt
 <% end -%>
 <% if @config.key?('elasticsearch.ssl.key') %>
 elasticsearch.ssl.key: <%= @config['elasticsearch.ssl.key'] %>
@@ -116,17 +121,17 @@ elasticsearch.ssl.key: <%= @config['elasticsearch.ssl.key'] %>
 
 # Optional setting that enables you to specify a path to the PEM file for the certificate
 # authority for your Elasticsearch instance.
-<% if @config.key?('elasticsearch.ssl.ca') %>
-elasticsearch.ssl.ca: <%= @config['elasticsearch.ssl.ca'] %>
+<% if @config.key?('elasticsearch.ssl.certificateAuthorities') %>
+elasticsearch.ssl.certificateAuthorities: [<%= @config['elasticsearch.ssl.certificateAuthorities'] %>]
 <% else -%>
-#elasticsearch.ssl.ca: /path/to/your/CA.pem
+#elasticsearch.ssl.certificateAuthorities: [ "/path/to/your/CA.pem" ]
 <% end -%>
 
-# To disregard the validity of SSL certificates, change this setting's value to false.
+# To disregard the validity of SSL certificates, change this setting's value to 'none'.
 <% if @config.key?('elasticsearch.ssl.verify') %>
-elasticsearch.ssl.verify: <%= @config['elasticsearch.ssl.verify'] %>
+elasticsearch.ssl.verificationMode: <%= @config['elasticsearch.ssl.verificationMode'] %>
 <% else -%>
-#elasticsearch.ssl.verify: true
+#elasticsearch.ssl.verificationMode: full
 <% end -%>
 
 # Time in milliseconds to wait for Elasticsearch to respond to pings. Defaults to the value of
@@ -217,4 +222,12 @@ logging.verbose: <%= @config['logging.verbose'] %>
 ops.interval: <%= @config['ops.interval'] %>
 <% else -%>
 #ops.interval: 5000
+<% end -%>
+
+# The default locale. This locale can be used in certain circumstances to substitute any missing
+# translations.
+<% if @config.key?('i18n.defaultLocale') %>
+i18n.defaultLocale: <%= @config['i18n.defaultLocale'] %>
+<% else -%>
+#i18n.defaultLocale: "en"
 <% end -%>
