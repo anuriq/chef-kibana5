@@ -49,21 +49,6 @@ action :configure do
         owner 'root'
         group 'root'
       end
-    else
-      systemd_service new_resource.svc_name do
-        description 'Kibana Backend'
-        after %w(network.target remote-fs.target nss-lookup.target)
-        install do
-          wanted_by 'multi-user.target'
-        end
-        service do
-          environment 'LANG' => 'C'
-          user svc_user
-          restart 'always'
-          exec_start node['kibana5']['exec_file']
-          exec_reload '/bin/kill -HUP $MAINPID'
-        end
-      end
     end
   else
     systemd_service new_resource.svc_name do
