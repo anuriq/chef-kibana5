@@ -13,6 +13,6 @@ supports 'redhat', '>= 7.0'
 supports 'ubuntu', '>= 16.04'
 
 depends 'ark'
-depends 'systemd', '~> 2.0'
+depends 'systemd', '>= 2.0'
 
 chef_version '>= 12.1' if respond_to?(:chef_version)
