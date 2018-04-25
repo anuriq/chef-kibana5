@@ -240,3 +240,4 @@ end
 
 ::Chef::Recipe.send(:include, Kibana::Helpers)
 ::Chef::Resource.send(:include, Kibana::Helpers)
+::Chef::Provider.send(:include, Kibana::Helpers)
