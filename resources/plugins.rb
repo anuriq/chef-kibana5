@@ -35,6 +35,7 @@ action :install do
     execute "Install #{new_resource.name} Kibana plugin" do
       command "./kibana-plugin install #{new_resource.name}"
       cwd     "/opt/kibana/#{node['kibana5']['version']}/current/bin"
+      user    node['kibana5']['service_user']
       notifies :restart, 'service[kibana]'
       not_if "/opt/kibana/#{node['kibana5']['version']}/current/bin/kibana-plugin list | grep #{new_resource.name}"
     end
@@ -42,6 +43,7 @@ action :install do
     execute "Install #{new_resource.name} Kibana plugin" do
       command "./kibana-plugin install #{new_resource.url}"
       cwd     "/opt/kibana/#{node['kibana5']['version']}/current/bin"
+      user    node['kibana5']['service_user']
       notifies :restart, 'service[kibana]'
       not_if "/opt/kibana/#{node['kibana5']['version']}/current/bin/kibana-plugin list | grep #{new_resource.name}"
     end
