@@ -12,6 +12,9 @@ provisioner:
   client_rb:
     diff_disabled: true
 
+verifier:
+  name: inspec
+
 platforms:
   - name: centos-7
     driver:
