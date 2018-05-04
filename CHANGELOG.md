@@ -1,3 +1,10 @@
+## 1.6.0 (4 May, 2018)
+  - kibana-plugins are executed from service user
+  - allow newest version of `systemd` cookbook
+  - fix an issue with helpers for Chef 14
+  - rename kitchen.docker.yml to dokken and make it a default testing suite
+  - fix issues to make Travis CI builds work
+
 ## 1.5.0 (26 Feb, 2018)
   - Fix style according to newest Cookstyle and FoodCritic;
   - Use CentOS 7.4 for testing;
