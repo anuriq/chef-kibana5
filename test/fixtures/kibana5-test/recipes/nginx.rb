@@ -1,6 +1,6 @@
 # Install nginx and configure a primitive proxy to Kibana
 node.default['nginx']['default_site_enabled'] = false
-node.default['nginx']['repo_source'] = nil
+node.default['nginx']['repo_source'] = 'epel' if node['platform_family'] == 'rhel'
 include_recipe 'nginx'
 
 nginx_site 'kibana' do
