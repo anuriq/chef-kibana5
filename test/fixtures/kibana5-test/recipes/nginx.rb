@@ -1,5 +1,6 @@
 # Install nginx and configure a primitive proxy to Kibana
 node.default['nginx']['default_site_enabled'] = false
+node.default['nginx']['repo_source'] = nil
 include_recipe 'nginx'
 
 nginx_site 'kibana' do
