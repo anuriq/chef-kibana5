@@ -31,7 +31,7 @@ This resource installs Kibana 5 binaries.
 |Attribute|Description|Type|Default|
 |---------|-----------|----|-------|
 |`name`| Simply name. Currently not used. |String||
-|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`5.6.8`|
+|`version`| Version of Kibana. 5.2.0 and above are supported. |String|`5.6.9`|
 |`install_method`| Installation method. Currently only `release` is supported. This means installation from official binaries provided by Elastic. |String|`release`|
 |`base_dir`| Base directory for Kibana binaries. |String|`/opt/kibana`|
 |`svc_user`| Kibana daemon user. |String|`kibana`|
