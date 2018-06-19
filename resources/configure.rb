@@ -31,7 +31,7 @@ action :configure do
   svc_group = new_resource.svc_group == '' ? node['kibana5']['service_group'] : new_resource.svc_group
 
   systemd_service new_resource.svc_name do
-    description 'Kibana Backend'
+    unit_description 'Kibana Backend'
     after %w(network.target remote-fs.target nss-lookup.target)
     install do
       wanted_by 'multi-user.target'
