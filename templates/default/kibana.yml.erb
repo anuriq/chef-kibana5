@@ -116,10 +116,10 @@ elasticsearch.ssl.key: <%= @config['elasticsearch.ssl.key'] %>
 
 # Optional setting that enables you to specify a path to the PEM file for the certificate
 # authority for your Elasticsearch instance.
-<% if @config.key?('elasticsearch.ssl.ca') %>
-elasticsearch.ssl.ca: <%= @config['elasticsearch.ssl.ca'] %>
+<% if @config.key?('elasticsearch.ssl.certificateAuthorities') %>
+elasticsearch.ssl.certificateAuthorities: <%= @config['elasticsearch.ssl.certificateAuthorities'] %>
 <% else -%>
-#elasticsearch.ssl.ca: /path/to/your/CA.pem
+#elasticsearch.ssl.certificateAuthorities: /path/to/your/CA.pem
 <% end -%>
 
 # To disregard the validity of SSL certificates, change this setting's value to false.
