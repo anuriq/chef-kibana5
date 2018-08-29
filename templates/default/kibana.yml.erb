@@ -175,6 +175,15 @@ elasticsearch.startupTimeout: <%= @config['elasticsearch.startupTimeout'] %>
 #elasticsearch.startupTimeout: 5000
 <% end -%>
 
+# X-Pack auth. If set to false, the login form,
+# user and role management screens, and authorization using Kibana
+# privileges are disabled.
+<% if @config.key?('xpack.security.enabled') %>
+xpack.security.enabled: <%= @config['xpack.security.enabled'] %>
+<% else -%>
+#xpack.security.enabled: true
+<% end -%>
+
 # Specifies the path where Kibana creates the process ID file.
 <% if @config.key?('pid.file') %>
 pid.file: <%= @config['pid.file'] %>
