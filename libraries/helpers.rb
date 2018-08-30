@@ -279,6 +279,26 @@ module Kibana
             },
           },
         },
+        '5.6.11' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => 'c75d26c80510bfd9436fba4fc086121dc98cd1465401ed14336ae565e48e1638',
+            },
+            'x86' => {
+              'checksum' => 'fbe6b901f39b79d67a8aafd8e8934d2088943c4a0b68a20deac7600a40f24376',
+            },
+          },
+          'windows' => {
+            'x86' => {
+              'checksum' => '92ef41067adbbafdbdc4f5fb148c64fab9c971962bfb9191e37f444e32495b8a',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => '4dd0f666460daa886fd4891896f561af0a449323270dff5eed5bf1ce8b2570d2',
+            },
+          },
+        },
         '5.6.10' => {
           'release' => {
             'x86_64' => {
