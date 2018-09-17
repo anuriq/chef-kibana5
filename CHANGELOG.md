@@ -1,3 +1,8 @@
+## 1.6.1 (17 September, 2018)
+  - Add versions up to 6.3.0 of Kibana;
+  - Fix systemd description property error;
+  - Add xpack security flag in Kibana.yml;
+
 ## 1.6.0 (4 May, 2018)
   - kibana-plugins are executed from service user
   - allow newest version of `systemd` cookbook
