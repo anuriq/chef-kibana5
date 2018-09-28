@@ -57,7 +57,74 @@ module Kibana
 
     # Returns SHA256 checksum map for Kibana artifacts
     def kibana_checksum_map
-      {
+      { '6.4.1' => {
+        'release' => {
+          'x86_64' => {
+            'checksum' => '6c6fa47450cb05b96b97166a627d07c76591909da82d3bca0708bdebb889bf86',
+          },
+        },
+        'windows' => {
+          'x86_64' => {
+            'checksum' => 'd6bf3f8e1bed118e1ef89f755feadfc0bcf63b491f0e709cdd17b2f5bad425d8',
+          },
+        },
+        'darwin' => {
+          'x86_64' => {
+            'checksum' => '99329cd263d080a0df3e2792283b60a02b2e5c990477255b0027826cb7419a9b',
+          },
+        },
+      },
+        '6.4.0' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => 'df2056105a08c206a1adf9caed09a152a53429a0f1efc1ba3ccd616092d78aee',
+            },
+          },
+          'windows' => {
+            'x86_64' => {
+              'checksum' => '6ebd2cd3e2b030f864e4ab2d552aecce8cb52155add7b77150857b71a1cf0d04',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => 'abb074fc31c78fa6a6a82caf479dcc8162db75faac93d05b3d331acc2f37b11c',
+            },
+          },
+        },
+        '6.3.2' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => '605bf5e991d206b5b2799ef5210644c50192cad6a239662a8674d57fdf3b69ce',
+            },
+          },
+          'windows' => {
+            'x86_64' => {
+              'checksum' => '33aa8a56fcef24cee437bfa1c26338698d4174871dbbb2ff924150e71ea77732',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => '8399b9c1c9413297e3666f5d209989734f736a58c4290aa04879a186a6737cf7',
+            },
+          },
+        },
+        '6.3.1' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => 'b226ae395880379d051385d6453699e9861ff337ed380fd6d636b8a0aaae7dd1',
+            },
+          },
+          'windows' => {
+            'x86_64' => {
+              'checksum' => '84e664c107504caa538646737e1e1b011d26337d7e72743f369053ebeba14de4',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => 'b89e587822608c06cd9dc86f4f38896c463166de75ceee5e909b460cdb9e3201',
+            },
+          },
+        },
         '6.3.0' => {
           'release' => {
             'x86_64' => {
@@ -276,6 +343,26 @@ module Kibana
           'darwin' => {
             'x86_64' => {
               'checksum' => '4df71e6f4144a60847b3b5bb064bfd4b39c2824908b35de44338e1c41b1db411',
+            },
+          },
+        },
+        '5.6.12' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => '45f59627c9f72c27406f51444500e744611279712a8aa7ab87549eb3cea10072',
+            },
+            'x86' => {
+              'checksum' => '447f46867f2da294b6d540e71b47a34af57485543c02ddbceaf97b378345228a',
+            },
+          },
+          'windows' => {
+            'x86' => {
+              'checksum' => '6241586223e9a82251c6caed3718a3a8285fc4eab1c2c61338053bcc50731e92',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => 'ca3552381c82cf2468b2be2492d9763797152485e6b51827762103f82070a154',
             },
           },
         },
