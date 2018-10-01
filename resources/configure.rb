@@ -47,6 +47,15 @@ action :configure do
 
   config = new_resource.configuration
 
+  directory ::File.dirname(config['logging.dest']) do
+    owner svc_user
+    group svc_group
+    mode '0755'
+    recursive true
+    action :create
+    not_if { (config['logging.dest'] == 'stdout') || (config['logging.dest'] == '/var/log/kibana.log') }
+  end
+
   file config['logging.dest'] do
     mode '0644'
     owner svc_user
