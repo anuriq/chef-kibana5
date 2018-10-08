@@ -1,3 +1,7 @@
+## 1.6.2 (8 October, 2018)
+  - Fix creation of logging folder;
+  - Add versions up to 6.4.1 of Kibana;
+
 ## 1.6.1 (17 September, 2018)
   - Add versions up to 6.3.0 of Kibana;
   - Fix systemd description property error;
