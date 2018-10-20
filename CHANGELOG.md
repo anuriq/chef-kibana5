@@ -1,3 +1,6 @@
+## 1.6.3 (12 October, 2018)
+  - Add version 6.4.2 of Kibana;
+
 ## 1.6.2 (8 October, 2018)
   - Fix creation of logging folder;
   - Add versions up to 6.4.1 of Kibana;

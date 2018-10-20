@@ -52,28 +52,45 @@ module Kibana
     end
 
     def kibana_arch
-      (node['kernel']['machine'] == 'x86_64') ? 'x86_64' : 'x86'
+      node['kernel']['machine'] == 'x86_64' ? 'x86_64' : 'x86'
     end
 
     # Returns SHA256 checksum map for Kibana artifacts
     def kibana_checksum_map
-      { '6.4.1' => {
+      { '6.4.2' => {
+        'darwin' => {
+          'x86_64' => {
+            'checksum' => '1078c4c5ced83459726522a268510e1c99d5e5f4fef7284c3b39ba8ca9c59bf2',
+          },
+        },
         'release' => {
           'x86_64' => {
-            'checksum' => '6c6fa47450cb05b96b97166a627d07c76591909da82d3bca0708bdebb889bf86',
+            'checksum' => 'f3a69709171ea8e28da754578ec519f33c423d3e3cbed6e81381f14cb8517383',
           },
         },
         'windows' => {
           'x86_64' => {
-            'checksum' => 'd6bf3f8e1bed118e1ef89f755feadfc0bcf63b491f0e709cdd17b2f5bad425d8',
-          },
-        },
-        'darwin' => {
-          'x86_64' => {
-            'checksum' => '99329cd263d080a0df3e2792283b60a02b2e5c990477255b0027826cb7419a9b',
+            'checksum' => '91d986ad26f077337003a22acd78292802d20378dfd5b54a01ccceac2cdd072e',
           },
         },
       },
+        '6.4.1' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => '6c6fa47450cb05b96b97166a627d07c76591909da82d3bca0708bdebb889bf86',
+            },
+          },
+          'windows' => {
+            'x86_64' => {
+              'checksum' => 'd6bf3f8e1bed118e1ef89f755feadfc0bcf63b491f0e709cdd17b2f5bad425d8',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => '99329cd263d080a0df3e2792283b60a02b2e5c990477255b0027826cb7419a9b',
+            },
+          },
+        },
         '6.4.0' => {
           'release' => {
             'x86_64' => {
@@ -600,8 +617,7 @@ module Kibana
               'checksum' => 'bd1be9758b11b071bc033e9ed996598f4da6cdb18b28c475993c429f1c17db31',
             },
           },
-        },
-      }
+        } }
     end
   end
 end
