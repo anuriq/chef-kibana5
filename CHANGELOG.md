@@ -1,3 +1,6 @@
+## 1.6.4 (15 March, 2019)
+  - Add latest versions of Kibana;
+
 ## 1.6.3 (12 October, 2018)
   - Add version 6.4.2 of Kibana;
 
