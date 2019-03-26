@@ -1,3 +1,8 @@
+## 1.6.5
+  - Add version 5.6.16 of Kibana;
+  - Set 5.6.16 as default version of Kibana.
+  - Fixed hashes added in v1.6.4
+
 ## 1.6.4 (15 March, 2019)
   - Add latest versions of Kibana;
 
