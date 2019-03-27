@@ -20,7 +20,7 @@
 default['kibana5']['url'] = nil
 default['kibana5']['checksum'] = nil
 
-default['kibana5']['version'] = '5.6.11'
+default['kibana5']['version'] = '5.6.16'
 default['kibana5']['distribution_base_url'] = 'https://artifacts.elastic.co/downloads/kibana'
 default['kibana5']['service_user'] = 'kibana'
 default['kibana5']['service_group'] = 'kibana'

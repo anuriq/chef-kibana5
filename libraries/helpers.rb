@@ -58,66 +58,83 @@ module Kibana
     # Returns SHA256 checksum map for Kibana artifacts
     def kibana_checksum_map
       {
-        '6.6.2' => {
+        '6.7.0' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '9a4026f3bccec93130e4b0c6c61d1a23f64302f2389572523df84696f6be0cb3',
+              'checksum' => '5e88dadbedef9be6c388999210c80eb3c04e453fe4c9c02662e15efb40d3b40e',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => 'a061e4815eaa4880612bab89b99110790af09f6612f1134dff706f2be27c3546',
+              'checksum' => 'a725274b54a613c7f64b6ba050cbcb571bb52a8911845923677836373ea82cab',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => '55008c3c0d458810d24def654f2f76b3b60d8138a014d5bbdb00c2ab60912f76',
+              'checksum' => 'bb500fd706c51fae5375c531ea1338f2836d584582932965b7e6b0a99a9c41e3',
+            },
+          },
+        },
+        '6.6.2' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => '45b32f6053c683bf8ba2cb0841c1ee705e524586a2aa3547afcca629fea0a6b0',
+            },
+          },
+          'windows' => {
+            'x86_64' => {
+              'checksum' => '5e15d1c4e183fe22fe47d86dec3c068c6a46ec46cb37d44cd5e1ccceac991a2f',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => '4109dc969d572b87dd05ef95e32ba0afddedb250c150d46e2b428ec4a4431822',
             },
           },
         },
         '6.6.1' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '843026137f4499df0da7911c67b3342d5cf175fb3b047e18d536bc6533a1c987',
+              'checksum' => '9a29eae0edf71450dc4a5d1e30dec9afe64f75d95d26572e208dad3adc36f975',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => '2a2773bf1b93541f83dcd15564f30730ca5aa5980323c590dfafb75f08a69f2d',
+              'checksum' => '24b2467b512eb4197eec9a170c0eb59e5e6c6dec776bcad6a4f1c8de7e7db4ab',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => '7f9a2512419e5763ed79d92578d89544d8858c7d71ec3b2fd980043086ae8ce7',
+              'checksum' => '85724d4fec3cd6cf79b78182296568f822b7726acaba61d31556c86c8c4f7080',
             },
           },
         },
         '6.6.0' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '39921f2ee5992792d16c899e08e06459bd6cc4bd76d4ec1c3aa715dab323bd62',
+              'checksum' => '8b3cc99e6e6d5f5559fd858b43befb16cf65994375b4e904ec3a702aba947865',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => 'd180ff3aa2147436b8511f9852abda19b044aea9abe8780c7d328bad28a06500',
+              'checksum' => '82150be20d6a7a149e8f12439f0751e9a93d8ccd60dcdfdcd6576f484baedfcf',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => 'f408c1929424896fd7db45bd70437eff95e6fe44c782d48dfdfb971def1f0f51',
+              'checksum' => '924a087119915c9c355e6c212d704586a9d063c25eae17dea6988311f3bce336',
             },
           },
         },
         '6.5.4' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '18941a55dfe388f8f082fda74cf73a465b519d2cb9dcf4f0bdb5d413870fcab1',
+              'checksum' => '7a511725bb43f136037c3ca12b2a379497745f81f6af9b75486f7f5f3a3a9653',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => '98c54c3d81f1feda786f07e7f1c5cd906603b7b7c9fb7111601b3a4e56f301d7',
+              'checksum' => 'da990f86478021c8ca79643b5d0cadfef6066ebb3c5efe70866b71571c2bf6a2',
             },
           },
           'darwin' => {
@@ -129,85 +146,85 @@ module Kibana
         '6.5.3' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '31f2c8d2558ddc25575b400f705d2da80942cd3b721f688500066ad1b785b325',
+              'checksum' => '4a424a677798592455703239a15e474baecd400e940886c74e402ae9940f7720',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => 'c6b61117db725be9c949680935eecd0c7ff107211e09e552fb98e47511256d58',
+              'checksum' => '18dfa7ee6893776ea1f07a07859eb03476dc381fea41aa92fc950e493a651e91',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => '1d1400f5b9d942c4366c77d9c30b6acfdf9ea62d7bbad35abf9627b1610548c4',
+              'checksum' => '34439306069aaed252fdbbf70e7299875a61d352656202438ebb725196a92ad8',
             },
           },
         },
         '6.5.2' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '8ccf7024c8e382062c0da6202e3ba35cb184cb0e77ff35367680cba55b508e68',
+              'checksum' => 'aa17ec706aab6e419b65333d25054d3a99749938fdb9399572f3eb9e7d6d00cd',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => '0f7ef47797c7500aaacdf0929c783cd79d70ce5ba30260ff502c3a1322b3aa60',
+              'checksum' => '69b2fc980bc3ae741222f103c797ee8df2d2f4d900386db580ee9f47d74070c1',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => '23034aca235f778b89c185f6990e78dc4977ebe6a922308ca76d7236edcdba8d',
+              'checksum' => '01fcd50304705fd5d6919b24e202757b6d07d11278092e2c6a6bef21582234e7',
             },
           },
         },
         '6.5.1' => {
           'release' => {
             'x86_64' => {
-              'checksum' => 'a378fcc78ec57bd6d9bb5ac34f594e2b7f1ece61c0657530020e206a8b12d9c1',
+              'checksum' => 'bbbcb59cc3f5e9b8e4dd747c72437360b101ae6d29f1e6df40fb2b39e4223752',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => 'c958d8e0b34d90df71f1a5e938243e72c92ec14af07728b20b2d0d42dd271520',
+              'checksum' => '36cf357c683ef00e95811a70fd4b433fb5a8a9d85f1fe6b783cdeeae9fb70559',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => 'cd3e3b70bc86738373d47c400c59c354732adb412915793a58bfe58132175c5a',
+              'checksum' => 'a3729b5579b19dbbc1fa2c9deb1de9566ae2eb07dc64efd8857271f614b64d42',
             },
           },
         },
         '6.5.0' => {
           'release' => {
             'x86_64' => {
-              'checksum' => 'ffd028bc67c632e266a9ac5e3d4ff0eebd0f5c50e0d2d98ccf86f40b833eed4f',
+              'checksum' => '9fc9edd5730843f6622bb845ac4edda7f48e8d38dc78cda154d453925a2c1e0d',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => 'ca9dae66c6911896858b7361c7cd1401053eb2e7a86e6478b63151f269d19206',
+              'checksum' => 'b1357d5e9b81b386ceea6f05d5a0104d36051f816b4fa20cdea7d07b004d66f6',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => 'e4419bd7381ee237246b792ab18d2c1c15c3474b35e16048265b31071ae6d706',
+              'checksum' => '6d98807f681acd240d464144405a6ca19a8cc6ee680afe5e5cb20745e1b9130b',
             },
           },
         },
         '6.4.3' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '18e28dafd3e1cf0343a6eab38abb750a82fa312169414291d488831df88233f5',
+              'checksum' => '5f1fe4f464bbfeccbd79c620ad728c1537b6f92af54b31e9cc7c4e86adce4c2c',
             },
           },
           'windows' => {
             'x86_64' => {
-              'checksum' => '8fc20bc7176faae255ffb91ef59b620e69cfd37b6717e95747f26ea3a37f5222',
+              'checksum' => '1d744e0e0822d03c933220a3314ae1dcdb7e36be06be1fdabca6d1a4dd7d3fbb',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => '4a256a1b40cb0021d3df6a2149732c1298c3e8280fde8021fc9c9df2d66d9eb3',
+              'checksum' => 'ac70e261057f85557bad5035c6ed939c54cd09ea4ff8a831692a9a59f8212e4a',
             },
           },
         },
@@ -517,63 +534,83 @@ module Kibana
             },
           },
         },
-        '5.6.15' => {
+        '5.6.16' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '5219f4b1bbf649967b919e732110920727c3f5f462d7e4d9cc67d2324d54d16b',
+              'checksum' => '4abbb3a0876fcdf8be76366e0fe5348aaa3bac71c68ec1884c8b14eee121f943',
             },
             'x86' => {
-              'checksum' => 'f762859ec69f7660640a6823422f717976bf182451525ab98a86ba946a749493',
+              'checksum' => 'b63a80c45cd866141799640ffeaf18990fc66f40ec7977498c20701606246a2e',
             },
           },
           'windows' => {
             'x86' => {
-              'checksum' => '22794da5d22abaf06f773c93dfcb160f16529febeaaaebfa1a77bc91029697fe',
+              'checksum' => '7e05d4a579c9c085b07ecbb8b80d0b44b2de87efb9a6c51b14d14e9ea9e51579',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => 'e7eaee01146b4a5600de90f8fe0164c2f194229a2fdc772167bf9b47d22a1756',
+              'checksum' => '9406f8fc55adef28673d99674942b18eb14ba02621774c155074e29cd0130c4b',
+            },
+          },
+        },
+        '5.6.15' => {
+          'release' => {
+            'x86_64' => {
+              'checksum' => '5b6891dd6c865262c08956f49c310c0d729b60bfb85bc39564f961fa5344223c',
+            },
+            'x86' => {
+              'checksum' => '9586cc909a105e89db52f7c5c60e50fb921c465a0e2a1275bc35a175897121ee',
+            },
+          },
+          'windows' => {
+            'x86' => {
+              'checksum' => 'b2ed1097fa4f2c86442ec25647d2304ded6b62c20c82f863e3dbe97261d3bbfb',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => '94af3109b88229b864738c6b449efc669a786e31922641cc24423a1be3dd38e6',
             },
           },
         },
         '5.6.14' => {
           'release' => {
             'x86_64' => {
-              'checksum' => '0a4b5bc914a5a5c6c4b19db83a9754099fb48289c12cb29e55222a6760e49edc',
+              'checksum' => '71cdc8c7c223967de0ca492147f91d3fd093876f9bc5802ccdab2f76d5f23b1a',
             },
             'x86' => {
-              'checksum' => 'c0134771f3a1d72384f3fe7304271aa4113139408ccbb91eb93a3bb5eaf4a579',
+              'checksum' => '1dfb19333b0082a791e70d3b7a85cf6120f8a42b598c4a074f996e5888894bbb',
             },
           },
           'windows' => {
             'x86' => {
-              'checksum' => '6fe92acd669ee8354e5a9e34291124b418e055fdf7e73e2fb37468e186337c59',
+              'checksum' => '9a17fc932294568c233232471bb2891e2cb7fc27a252e13054cbb9a1253e2806',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => 'cf78ff58c5e8dc0f75273da5c1ef8a2be88f5e03c1a79946b28f907264af0874',
+              'checksum' => '46b9b092170604addf462e3e5f85b40294efb489c187fa8ead032624993e0ab6',
             },
           },
         },
         '5.6.13' => {
           'release' => {
             'x86_64' => {
-              'checksum' => 'b4b1846f11bee1cc67dae242516dd2079fe83fb9e1975838e5eb41107570c97d',
+              'checksum' => '1294523f9be72517a68e4a1a8fe672059235b2cbd257aaff88750225da62c201',
             },
             'x86' => {
-              'checksum' => '9fdefe88b78d9e48a6447d2eb4122aaf1edb79c1a7a9bb7ada2137aba5db7ac4',
+              'checksum' => '0ac212901139249e6c08645ddbcc8b2f084d180bbac3110f2223d188fdbbb61c',
             },
           },
           'windows' => {
             'x86' => {
-              'checksum' => '28a4d48a29299bfcd14cf6c43564e67bd8b1e47ea81823f3f322fd3c670d13d0',
+              'checksum' => '2a851d002e4f3f6588f890006c92750421c7d1e2a28816a0becb9f957c8828da',
             },
           },
           'darwin' => {
             'x86_64' => {
-              'checksum' => 'c88a3df789a638fe5c6899762b4081f63e9a43ee6537b921604187c2a4880a83',
+              'checksum' => 'b08b75f4ebad7022d74bb14caae137b8c92d5e849e9e988fbbd76971b1ebcc43',
             },
           },
         },
