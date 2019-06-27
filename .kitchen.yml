@@ -1,7 +1,7 @@
 driver:
   name: dokken
   privileged: true # because Docker and SystemD/Upstart
-  chef_version: latest
+
 
 transport:
   name: dokken
@@ -9,6 +9,7 @@ transport:
 provisioner:
   name: dokken
   deprecations_as_errors: false
+  chef_license: accept
 
 verifier:
   name: inspec
