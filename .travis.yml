@@ -34,4 +34,6 @@ matrix:
   include:
     - script:
       - /opt/chefdk/bin/chef exec rake style
-      env: UNIT_AND_LINT=1
+      env:
+       - UNIT_AND_LINT=1
+       - CHEF_LICENSE=accept
