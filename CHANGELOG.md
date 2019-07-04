@@ -1,3 +1,6 @@
+## 1.6.6 (4 July, 2019)
+  - Added version 6.8.0 of Kibana;
+
 ## 1.6.5 (27 March, 2019)
   - Add versions 5.6.16 and 6.7.0 of Kibana;
   - Set 5.6.16 as default version of Kibana.
