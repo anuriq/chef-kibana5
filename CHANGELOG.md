@@ -1,3 +1,6 @@
+## 1.6.7 (19 Aug, 2019)
+  - Added versions 6.8.1 and 6.8.2 of Kibana;
+
 ## 1.6.6 (4 July, 2019)
   - Added version 6.8.0 of Kibana;
 
