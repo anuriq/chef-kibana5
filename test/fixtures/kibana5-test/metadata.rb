@@ -4,5 +4,5 @@ version '0.1.0'
 
 depends 'java'
 depends 'elasticsearch', '< 4.0'
-depends 'nginx'
+depends 'nginx', '< 10.0'
 depends 'kibana5'
