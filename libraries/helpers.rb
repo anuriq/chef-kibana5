@@ -59,11 +59,6 @@ module Kibana
     def kibana_checksum_map
       {
         '6.8.0' => {
-          'darwin' => {
-            'x86_64' => {
-              'checksum' => 'e19aa9fba9384ca91381c5d5f2d312b72a6f7100e56e143db771b6c3608edde2',
-            },
-          },
           'release' => {
             'x86_64' => {
               'checksum' => '6f4d7323a12f3dd2078c0289e334dbd0bc9659da315b8a2ec91fcfd5efd20776',
@@ -72,6 +67,11 @@ module Kibana
           'windows' => {
             'x86_64' => {
               'checksum' => '5cfb592b9231c77ad2e2f46b703d86f191c53ae1c46bbce6c860dcbb4cfb2982',
+            },
+          },
+          'darwin' => {
+            'x86_64' => {
+              'checksum' => 'e19aa9fba9384ca91381c5d5f2d312b72a6f7100e56e143db771b6c3608edde2',
             },
           },
         },
